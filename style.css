@@ -17,10 +17,8 @@ body {
     padding: 15px;
     max-width: 50vw;
     margin: 0 auto;
-    overflow: auto;
-    
+    overflow: auto;    
 }
-
 
 .table-calendar {
     border-collapse: collapse;
@@ -35,10 +33,8 @@ body {
    
 }
 
-
-
 .date-picker.selected span {
-    background-color: rgb(65, 236, 117);
+    background-color: rgb(255, 55, 0);
     width: 25px;
 }
 
@@ -55,8 +51,7 @@ body {
     clear: both;
 }
 
-.header-container {
-   
+.header-container {   
     padding: 5px 0;
 }
 
@@ -70,10 +65,9 @@ body {
     padding: 5px 1em;
 }
 .selected2{
-    background-color:rgb(32, 251, 32);
-   
-
+    background-color:rgb(250, 136, 90);
 }
+
 .header-container{
     margin-top: 1em;
     display: flex;
@@ -120,7 +114,7 @@ body {
   @media only screen and (min-device-width: 300px) and (max-device-width: 480px) {
     main {
         width:100vw;
-        
+        background: #bada55;
     }
     table{
         width:100vw;

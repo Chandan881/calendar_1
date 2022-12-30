@@ -13,7 +13,7 @@ selectYear = document.getElementById("year");
 selectMonth = document.getElementById("month");
 
 
-createYear = from_year(2015, 2025);
+createYear = from_year(2015, 2035);
 
 document.getElementById("year").innerHTML = createYear;
 
@@ -55,20 +55,6 @@ document.getElementById("thead-month").innerHTML = $dataHead;
 monthAndYear = document.getElementById("month-year");
 showCalendar(currentMonth, currentYear);
 
-
-
-function next() {
-    currentYear = (currentMonth === 11) ? currentYear + 1 : currentYear;
-    currentMonth = (currentMonth + 1) % 12;
-    showCalendar(currentMonth, currentYear);
-}
-
-function previous() {
-    currentYear = (currentMonth === 0) ? currentYear - 1 : currentYear;
-    currentMonth = (currentMonth === 0) ? 11 : currentMonth - 1;
-    showCalendar(currentMonth, currentYear);
-}
-
 function selector() {
     currentYear = parseInt(selectYear.value);
     currentMonth = parseInt(selectMonth.value);
@@ -89,7 +75,6 @@ function showCalendar(month, year) {
     selectYear.value = year;
     selectMonth.value = month;
 
-    
     var date = 1;
     for ( var i = 0; i < 6; i++ ) {
         
@@ -112,7 +97,7 @@ function showCalendar(month, year) {
                 cell.setAttribute("data-year", year);
                 cell.setAttribute("data-month_name", months[month]);
                 cell.className = `date-picker ${date}`
-               
+                
                 cell.innerHTML = "<span>" + date + "</span>";
 
 
@@ -139,7 +124,7 @@ function date5(){
     const ele = document.getElementsByClassName(value);
     console.log(ele);
     if(ele >= 32){
-        alert("no date is available"); 
+        alert("invalid"); 
     }
 
     ele[0].className += ` selected2`
@@ -147,7 +132,7 @@ function date5(){
     value.value =" ";
 }
 
-const btn = document.getElementsByClassName("button1");
+const btn = document.getElementsByClassName("btn1");
 console.log(btn);
 btn[0].addEventListener('click',date5);
 
